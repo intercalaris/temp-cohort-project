@@ -180,21 +180,21 @@ body {
 
 
 /* Buttons */
-.btn {
+.action-btn {
     border: none;
     padding: 1rem;
     font-size: 1.6rem;
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
     font-family: inherit;
     background-color: #413f9f;
     color: white;
     border-radius: 4px;
 }
 
-.btn:hover, .btn:active {
+.action-btn:hover, .action-btn:active {
     background-color: #282763;
 }
 

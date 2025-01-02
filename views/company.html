@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Piksul - Saved Projects</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../public/css/reset.css" />
+        <link rel="stylesheet" href="../public/css/global.css" />
+        <link rel="stylesheet" href="../public/css/company.css" />
+        <title>Company Page</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="/">INSERT LOGO</a>
+                </div>
+                <input type="text" placeholder="Search" class="search-bar" />
+                <ul class="nav-links">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/company">Company</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                </ul>
+                <div class="auth-links">
+                    <a href="/signup">Sign Up</a>
+                    <a href="/login">Login</a>
+                </div>
+            </nav>
+        </header>
 
-<body id="gallery">
-  <header>
-    <a href="/" class="button logo-home">
-      <img id="piksul-logo" src="/img/piksul-logo.png" alt="Piksul Logo">
-      <span>PIKSUL</span>
-    </a>
-    <div class="navigation">
-      <a href="/editor" class="button start-project"><span>New Project</span></a>
-    </div>
-    <div class="user-buttons">
-      <a class="button login"><span>Log In</span></a>
-      <a class="button create-account"><span>Sign Up</span></a>
-      <a class="button logout hidden"><span>Log Out</span></a>
-    </div>
-  </header>
-  <main>
-    <h1>Saved Projects</h1>
-    <section class="projects-gallery">
-      <% if (projects.length === 0) { %>
-        <p>No projects saved yet.</p>
-      <% } else { %>
-        <% projects.forEach(project => { %>
-          <div	class="project-card" 
-                data-id="<%= project.id %>"
-                data-block-size="<%= project.block_size %>"
-                data-palette-size="<%= project.palette_size %>"
-                data-edited-image="<%= project.edited_image %>">
+        <!-- Main Content -->
+        <main class="company-container">
+            <!-- Company Info Section -->
+            <section class="company-info">
+                <div class="company-logo">Company Logo</div>
+                <nav class="company-tabs">
+                    <a href="#overview" class="tab">Overview</a>
+                    <a href="#reviews" class="tab">Reviews</a>
+                    <a href="#salaries" class="tab">Salaries</a>
+                </nav>
+                <button class="btn action-btn">Review This Company</button>
+            </section>
 
-            <img src="/gallery/image/<%= project.edited_image %>" alt="Project Thumbnail">
-            <div class="bottom-project-card">
-              <div class="project-info">
-                <p>Block Size: <%= project.block_size %></p>
-                <p><%= project.palette_size ? `Palette Size: ${project.palette_size}` : '' %></p>
-                <p>Created On: <%= new Date(project.created_at).toLocaleDateString() %></p>
-              </div>
-              <div class="project-buttons">
-                  <a href="/editor/<%= project.id %>" class="button open-project">Open in Editor</a>
-                  <a class="button delete-project"><img class="trash" src="/img/trash.png" alt="trashcan">
-                  <a href="#" class="button open-sketch">Open in Sketch</a>
-              </div>
-            </div>
-          </div>
-        <% }); %>
-      <% } %>
-      <div  class="project-card blank-card"></div>
-      <div  class="project-card blank-card"></div>
-      <div  class="project-card blank-card"></div>
-      <div  class="project-card blank-card"></div>
-      <div  class="project-card blank-card"></div>
-      <div  class="project-card blank-card"></div>
-      <div  class="project-card blank-card"></div>
-      <div  class="project-card blank-card"></div>
-    </section>
-  </main>
-  <script type="text/javascript" src="/js/main.js"></script>
-</body>
+            <!-- Content Section -->
+            <section class="content">
+                <div id="overview" class="content-box">Overview of company</div>
+                <div id="reviews" class="content-box">Summary of Reviews</div>
+                <div id="salaries" class="content-box">Summary of Salaries</div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 RC. All rights reserved.</p>
+        </footer>
+
+        <script src="/js/global.js"></script>
+        <script src="/js/company.js"></script>
+    </body>
 </html>
