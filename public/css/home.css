@@ -1,7 +1,10 @@
+/* General */
 * {
     box-sizing: border-box;
 }
-
+.hidden {
+    display: none;
+}
 html {
     font-size: 62.5%;
     height: 100%;
@@ -153,20 +156,17 @@ body {
     color: #e0e0e0;
 }
 
-/* Scrollbar Styling */
+/* Scrollbar */
 .feed::-webkit-scrollbar {
     width: 8px;
 }
-
 .feed::-webkit-scrollbar-track {
     background: #1f1f1f;
 }
-
 .feed::-webkit-scrollbar-thumb {
     background: #444;
     border-radius: 4px;
 }
-
 .feed::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
@@ -196,13 +196,4 @@ body {
 
 .action-btn:hover, .action-btn:active {
     background-color: #282763;
-}
-
-/* Utility Classes */
-.text-center {
-    text-align: center;
-}
-
-.hidden {
-    display: none;
 }

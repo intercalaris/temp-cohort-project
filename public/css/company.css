@@ -1,6 +1,10 @@
-/* General Styles */
+/* General */
 * {
     box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
 }
 
 html {
@@ -92,7 +96,7 @@ body {
     padding: 1rem;
 }
 
-/* Company Info Section */
+/* Company Info */
 .company-info {
     display: flex;
     justify-content: space-between;
@@ -154,7 +158,7 @@ body {
     background-color: #282763;
 }
 
-/* Content Section */
+/* Content */
 .content {
     display: flex;
     flex-direction: column;
