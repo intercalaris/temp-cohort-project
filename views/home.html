@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../public/css/reset.css" />
+        <link rel="stylesheet" href="../public/css/global.css" />
+        <link rel="stylesheet" href="../public/css/home.css" />
+        <title>Home Page</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="/">INSERT LOGO</a>
+                </div>
+                <input type="text" placeholder="Search" class="search-bar" />
+                <ul class="nav-links">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/company">Company</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                </ul>
+                <div class="auth-links">
+                    <a href="/signup">Sign Up</a>
+                    <a href="/login">Login</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="home-container">
+            <!-- Left Sidebar -->
+            <aside class="left-sidebar">
+                <button class="btn add-review">Add Review</button>
+                <button class="btn create-post">Create Post</button>
+                <section class="favorite-companies">
+                    <h3>Favorite Companies</h3>
+                    <ul class="favorite-list">
+                        <!-- update to dynamically populate as part of ejs -->
+                        <li>Favorite company 1</li>
+                        <li>Favorite company 2</li>
+                        <li>Favorite company 3</li>
+                        <li>Favorite company 4</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Feed Section -->
+            <section class="feed">
+                <div class="feed-item">Spotify is a great company</div>
+                <div class="feed-item">Costco defends DEI</div>
+                <div class="feed-item">Sample content</div>
+                <div class="feed-item">Sample content</div>
+                <div class="feed-item">Sample content</div>
+                <div class="feed-item">Sample content</div>
+                <div class="feed-item">Sample content</div>
+
+            </section>
+
+            <!-- Right Sidebar -->
+            <section class="right-sidebar">
+                <section class="top-companies">
+                    <h3>Best Rated Companies</h3>
+                    <ul class="top-list">
+                        <!-- update to dynamically populate as part of ejs -->
+                        <li>Top company 1</li>
+                        <li>Top company 2</li>
+                        <li>Top company 3</li>
+                    </ul>
+                </section>
+                <section class="worst-companies">
+                    <h3>Worst Rated Companies</h3>
+                    <ul class="worst-list">
+                        <!-- update to dynamically populate as part of ejs -->
+                        <li>Worst company 1</li>
+                        <li>Worst company 2</li>
+                        <li>Worst company 3</li>
+                    </ul>
+                </section>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 RC. All rights reserved.</p>
+        </footer>
+
+        <script src="/js/global.js"></script>
+        <script src="/js/home.js"></script>
+    </body>
+</html>

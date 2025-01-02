@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Piksul - Saved Projects</title>
+</head>
+
+<body id="gallery">
+  <header>
+    <a href="/" class="button logo-home">
+      <img id="piksul-logo" src="/img/piksul-logo.png" alt="Piksul Logo">
+      <span>PIKSUL</span>
+    </a>
+    <div class="navigation">
+      <a href="/editor" class="button start-project"><span>New Project</span></a>
+    </div>
+    <div class="user-buttons">
+      <a class="button login"><span>Log In</span></a>
+      <a class="button create-account"><span>Sign Up</span></a>
+      <a class="button logout hidden"><span>Log Out</span></a>
+    </div>
+  </header>
+  <main>
+    <h1>Saved Projects</h1>
+    <section class="projects-gallery">
+      <% if (projects.length === 0) { %>
+        <p>No projects saved yet.</p>
+      <% } else { %>
+        <% projects.forEach(project => { %>
+          <div	class="project-card" 
+                data-id="<%= project.id %>"
+                data-block-size="<%= project.block_size %>"
+                data-palette-size="<%= project.palette_size %>"
+                data-edited-image="<%= project.edited_image %>">
+
+            <img src="/gallery/image/<%= project.edited_image %>" alt="Project Thumbnail">
+            <div class="bottom-project-card">
+              <div class="project-info">
+                <p>Block Size: <%= project.block_size %></p>
+                <p><%= project.palette_size ? `Palette Size: ${project.palette_size}` : '' %></p>
+                <p>Created On: <%= new Date(project.created_at).toLocaleDateString() %></p>
+              </div>
+              <div class="project-buttons">
+                  <a href="/editor/<%= project.id %>" class="button open-project">Open in Editor</a>
+                  <a class="button delete-project"><img class="trash" src="/img/trash.png" alt="trashcan">
+                  <a href="#" class="button open-sketch">Open in Sketch</a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } %>
+      <div  class="project-card blank-card"></div>
+      <div  class="project-card blank-card"></div>
+      <div  class="project-card blank-card"></div>
+      <div  class="project-card blank-card"></div>
+      <div  class="project-card blank-card"></div>
+      <div  class="project-card blank-card"></div>
+      <div  class="project-card blank-card"></div>
+      <div  class="project-card blank-card"></div>
+    </section>
+  </main>
+  <script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
